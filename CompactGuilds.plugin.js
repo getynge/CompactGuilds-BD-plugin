@@ -266,37 +266,37 @@ class CompactGuilds {
     }
     `</select><br><br>
 
-     Show distance<br>
-     <input id='hg_show' type='number' value=${settings.show}> pixels<br><br>
+    Show distance<br>
+    <input id='hg_show' type='number' value=${settings.show}> pixels<br><br>
 
-     Hide distance<br>;
+    Hide distance<br>;
     <input id='hg_hide' type='number' value=${settings.hide}> pixels<br><br>
 
      Max window size to enable compact guilds<br>
-     <input id='hg_activeWidth' type='number' value=${settings.activeWidth} > pixels<br><br>
+    <input id='hg_activeWidth' type='number' value=${settings.activeWidth} > pixels<br><br>
   
-     <input type='checkbox' id='hg_always' ${(settings.always) ? 'checked' : ''} >
-     Enable guild hiding always<br>
+    <input type='checkbox' id='hg_always' ${(settings.always) ? 'checked' : ''} >
+    Enable guild hiding always<br>
 
 
 
-     <input type='checkbox' id='hg_enableminsize' ${(settings.overrideMins) ? 'checked' : ''}>
-     Override default window minimum sizes (restart discord when toggling off)<br>
-     Width:  <input id='hg_minWidth'  type='number' value=${settings.minWidth}> pixels<br>
-     Height: <input id='hg_minHeight' type='number' value= ${settings.minHeight} > pixels<br><br>
+    <input type='checkbox' id='hg_enableminsize' ${(settings.overrideMins) ? 'checked' : ''}>
+    Override default window minimum sizes (restart discord when toggling off)<br>
+    Width:  <input id='hg_minWidth'  type='number' value=${settings.minWidth}> pixels<br>
+    Height: <input id='hg_minHeight' type='number' value= ${settings.minHeight} > pixels<br><br>
 
 
-     <input type='checkbox' id='hg_trim'
-     (settings.trim) ?  checked> : >
-     Make channels thinner<br>
+    <input type='checkbox' id='hg_trim'
+    (settings.trim) ?  checked> : >
+    Make channels thinner<br>
 
-     <input type='checkbox' id='hg_mobilefy' ${(settings.mobilefy) ? 'checked' : ''} >
-     Hide channels too<br>
+    <input type='checkbox' id='hg_mobilefy' ${(settings.mobilefy) ? 'checked' : ''} >
+    Hide channels too<br>
 
     <br><button onclick=BdApi.getPlugin('${this.getName()}').saveSettings(this)>Save and apply</button>
     <button onclick=BdApi.getPlugin('${this.getName()}').resetSettings(this)>Reset settings</button> <br><br>
 
-     If your hide distance is too low you might not be able to access the settings panel. Use CTRL+COMMA (,) if this happens.`;
+    If your hide distance is too low you might not be able to access the settings panel. Use CTRL+COMMA (,) if this happens.`;
     return html;
   };
 }
